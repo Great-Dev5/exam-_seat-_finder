@@ -1,0 +1,395 @@
+/* ========================================
+   STUDENT.CSS - STUDENT-SPECIFIC STYLES
+   ======================================== */
+
+/* ---------- FIND SEAT PAGE ---------- */
+.page-find-seat .esf-card {
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  padding: 35px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.page-find-seat .esf-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.page-find-seat .form-control {
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+  background: #ffffff;
+}
+
+.page-find-seat .form-control:focus {
+  border-color: var(--esf-blue);
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);
+  outline: none;
+}
+
+.page-find-seat .form-label {
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+#seatResult .seat-card {
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  border-left: 4px solid var(--esf-blue);
+  box-shadow: var(--shadow-sm);
+  margin-top: 20px;
+}
+
+#seatResult .seat-card h4 {
+  color: var(--esf-blue);
+  font-weight: 700;
+}
+
+#seatResult .seat-card .seat-number {
+  display: inline-block;
+  padding: 8px 24px;
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* ---------- TIMETABLE PAGE ---------- */
+.page-timetable .esf-table-wrapper {
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.page-timetable .esf-table-wrapper:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.page-timetable .esf-table tbody td {
+  padding: 16px 20px;
+}
+
+.page-timetable .esf-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- VENUES PAGE ---------- */
+.page-venues .esf-card {
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  padding: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.page-venues .esf-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: var(--shadow-md);
+}
+
+.page-venues .esf-card-header {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  padding: 16px 24px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-venues .esf-card-header i {
+  font-size: 1.4rem;
+}
+
+.page-venues .esf-card-body {
+  padding: 20px 24px;
+}
+
+.page-venues .esf-card-body h5 {
+  color: #1a1a2e;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.page-venues .esf-card-body p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.page-venues .esf-card-body .venue-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  transition: var(--transition-normal);
+}
+
+.page-venues .esf-card:hover .venue-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.venue-icon.blue {
+  background: rgba(13, 110, 253, 0.12);
+  color: var(--esf-blue);
+}
+
+.venue-icon.red {
+  background: rgba(220, 53, 69, 0.12);
+  color: var(--esf-red);
+}
+
+.venue-icon.gold {
+  background: rgba(255, 193, 7, 0.12);
+  color: var(--esf-gold);
+}
+
+/* ---------- ANNOUNCEMENTS PAGE ---------- */
+.page-announcements .esf-card {
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  padding: 0;
+}
+
+.page-announcements .esf-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.page-announcements .esf-card-header {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  padding: 16px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-announcements .esf-card-header i {
+  font-size: 1.3rem;
+}
+
+.page-announcements .esf-card-body {
+  padding: 20px 24px;
+}
+
+.page-announcements .esf-card-body p {
+  color: #1a1a2e;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.page-announcements .esf-card:nth-child(2) .esf-card-header {
+  background: var(--gradient-red);
+}
+
+.page-announcements .esf-card:nth-child(3) .esf-card-header {
+  background: linear-gradient(135deg, #6C63FF, #0d6efd);
+}
+
+.page-announcements .esf-card:nth-child(4) .esf-card-header {
+  background: var(--gradient-gold);
+  color: #1a1a2e;
+}
+
+/* ---------- PROFILE PAGE ---------- */
+.page-profile .profile-avatar {
+  width: 100px;
+  height: 100px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(13, 110, 253, 0.3);
+  transition: var(--transition-normal);
+}
+
+.page-profile .profile-avatar:hover {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 12px 40px rgba(13, 110, 253, 0.4);
+}
+
+.page-profile .esf-card {
+  text-align: center;
+}
+
+.page-profile .esf-card hr {
+  border-color: rgba(13, 110, 253, 0.08);
+  margin: 24px 0;
+}
+
+.page-profile .esf-card strong {
+  color: #6b7280;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+.page-profile .esf-card p {
+  color: #1a1a2e;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+/* ---------- SETTINGS PAGE ---------- */
+.page-settings .esf-card {
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  padding: 35px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.page-settings .esf-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.page-settings .form-control {
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  transition: var(--transition-fast);
+  background: #ffffff;
+}
+
+.page-settings .form-control:focus {
+  border-color: var(--esf-blue);
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);
+  outline: none;
+}
+
+.page-settings .form-check-input {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.page-settings .form-check-input:checked {
+  background-color: var(--esf-blue);
+  border-color: var(--esf-blue);
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);
+}
+
+.page-settings .form-check-label {
+  color: #1a1a2e;
+  font-weight: 500;
+}
+
+/* ---------- HOME PAGE ---------- */
+.page-home .esf-hero {
+  padding: 120px 0 60px;
+}
+
+.page-home .esf-hero .container-fluid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.page-home .esf-card {
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.page-home .esf-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.page-home .esf-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+  transition: var(--transition-normal);
+}
+
+.page-home .esf-card:hover .esf-card-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.page-home .esf-card .d-flex {
+  transition: var(--transition-normal);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+}
+
+.page-home .esf-card .d-flex:hover {
+  background: rgba(13, 110, 253, 0.04);
+  transform: translateX(4px);
+}
+
+.page-home .esf-card .d-flex .esf-card-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 0.9rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 767.98px) {
+  .page-find-seat .esf-card {
+    padding: 20px;
+  }
+  
+  .page-profile .profile-avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  
+  .page-settings .esf-card {
+    padding: 20px;
+  }
+  
+  .page-venues .esf-card-body {
+    padding: 16px 20px;
+  }
+  
+  .page-home .esf-hero .container-fluid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

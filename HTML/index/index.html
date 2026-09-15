@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Exam Seat Finder - Find your examination seat, venue, time, and examination information.">
+    <!-- <meta name="author" content="Exam Seat Finder"> -->
+
+    <title>HOME | EXAM SEAT FINDER</title>
+
+    <!-- BOOTSRAP CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- BOOTSTRAP ICONS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- FAVICON -->
+
+    <link rel="icon" href="image/seat-finder-logo.svg" type="image/svg+xml">
+<!-- 
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3CCrect width='64' height='64' rx='14' fill='%230d6efd' /%3e%3Cpath d='M32 9 49 16v14c0 12-7 21-17 26C22 51 15 42 15 30V16z' fill='white'/%3E%3Circle cx='32' cy='30' r='8' fill='%23dc3545'/%3E%3C/svg%3E"> -->
+
+    <!-- MAIN CSS -->
+
+    <link rel="stylesheet" href="/my project/HTML/css/project.css">
+
+    <link rel="stylesheet" href="/my project/HTML/css/student.css">
+
+</head>
+
+<body class="page-home bg-home-map">
+
+    <!-- ================== MAP GROUND  ================== -->
+
+    <div class="map-road horizontal"></div>
+
+    <div class="map-road vertical"></div>
+
+    <div class="map-road diagonal-one"></div>
+
+    <div class="map-road diagonal-two"></div>
+
+    <div class="location-pin" style="top: 20%; left: 15%;"></div>
+
+    <div class="location" style="top: 55%; left: 70%;"></div>
+
+    <div class="location" style="top: 42%; left: 45%;"></div>
+
+    <div class="location-pin" style="top: 75%; left: 25%;"></div>
+
+
+    <!-- ================== NAVIGATION BAR  ================== -->
+
+    <nav class="navbar navbar-expand-lg main-navbar fixed-top">
+
+        <div class="container-fluid px-3 px-lg-4">
+
+            <a href="index.html" class="navbar-brand">
+            
+                <span class="brand-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                </span>
+
+
+                <span>EXAM <strong>SEAT</strong> FINDER</span>
+
+            </a>
+
+            <!-- MOBILE TOGGLE -->
+
+            <button class="navba-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavigation"
+            aria-expanded="false" aria-label="Toggle Navigation">
+<!-- 
+                <span class="navbar-toggler-icon"></span> -->
+
+            </button>
+
+            <!-- NAVIGATION -->
+
+            <div class="collapse navbar-collapse" id="topNavigation">
+
+                <ul class="navbar-nav ms-auto align-item-lg-center" sticky-top>
+
+                    <!-- HOME -->
+
+                    <li class="nav-item">
+
+                        <a href="index.html" class="nav-link active">
+
+                           Home
+                        </a>
+
+                    </li>
+
+                    <!-- ABOUT -->
+
+                    <li class="nav-item dropdown">
+
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+
+                            About 
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+
+                                <a href="about.html" class="dropdown-item">
+
+                                    About Exam Seat Finder
+
+                                </a>
+
+                            </li>
+
+                            <li>
+                                
+                                <a href="instructions.html" class="dropdown-item">
+
+                                    How It Works
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+
+                            Student
+
+                        </a>
+                        
+                        <ul class="dropdown-menu">
+
+                            <li>
+
+                                <a href="find-seat.html" class="dropdown-item">
+
+                                    Find My Seat
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="timetable.html" class="dropdown-item">
+
+                                    Timetable
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="venues.html" class="dropdown-item">
+
+                                    Examination Venues
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="announcements.html" class="dropdown-item">
+
+                                    Announcements
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="profile.html" class="dropdown-item">
+
+                                    My Profile
+
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="settings.html" class="dropdown-item">
+
+                                    Settings
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a href="contact.html" class="nav-link">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a href="staff-login.html" class="nav-link">
+
+                            Staff Portal
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item" ms-lg-2>
+
+                        <a href="login.html" class="btn btn-danger rounded-pill px-4">
+
+                            Login
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+             </div>
+
+         </div>
+
+    </nav>
+
+    <!-- ================== SIDEBAR ================== -->
+
+    <!-- ================== SIDEBAR (HIDDEN BY DEFAULT) ================== -->
+
+<!-- Sidebar Overlay (click to close sidebar) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="mainSidebar">
+    
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+        <i class="bi bi-mortarboard-fill"></i>
+        <strong>STUDENT</strong>
+        <button class="btn-close" onclick="closeSidebar()" aria-label="Close sidebar"></button>
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav flex-column gap-1">
+
+        <!-- HOME -->
+        <li>
+            <a href="index.html" class="nav-link active">
+                <i class="bi bi-house-fill"></i>
+                Home
+            </a>
+        </li>
+
+        <!-- EXAMINATION DROPDOWN -->
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-journal-bookmark-fill"></i>
+                Examination
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="find-seat.html" class="dropdown-item">
+                        Find My Seat
+                    </a>
+                </li>
+                <li>
+                    <a href="timetable.html" class="dropdown-item">
+                        Examination Timetable
+                    </a>
+                </li>
+                <li>
+                    <a href="venues.html" class="dropdown-item">
+                        Examination Venues
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- INFORMATION DROPDOWN -->
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-info-circle-fill"></i>
+                Information
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="announcements.html" class="dropdown-item">
+                        Announcements
+                    </a>
+                </li>
+                <li>
+                    <a href="instructions.html" class="dropdown-item">
+                        Examination Instructions
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- MY ACCOUNT DROPDOWN -->
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-check-fill"></i>
+                My Account
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="profile.html" class="dropdown-item">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html" class="dropdown-item">
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li>
+                    <a href="login.html" class="dropdown-item text-danger">
+                        <i class="bi bi-box-arrow-right"></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+
+</aside>
+
+<!-- ================== NAVIGATION BAR ================== -->
+
+<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+
+    <div class="container-fluid px-3 px-lg-4">
+
+        <!-- MENU TOGGLE BUTTON (opens sidebar) -->
+        <button class="menu-toggle me-2" id="menuToggle" onclick="toggleSidebar()" aria-label="Toggle navigation menu">
+            <span class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+
+        <!-- BRAND LOGO -->
+        <a href="index.html" class="navbar-brand">
+            <span class="brand-icon">
+                <i class="bi bi-geo-alt-fill"></i>
+            </span>
+            <span>EXAM <strong>SEAT</strong> FINDER</span>
+        </a>
+
+        <!-- MOBILE TOGGLE (for bootstrap collapse) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavigation"
+            aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- NAVIGATION LINKS -->
+        <div class="collapse navbar-collapse" id="topNavigation">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <!-- Your existing nav links here -->
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                        About
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html" class="dropdown-item">About Exam Seat Finder</a></li>
+                        <li><a href="instructions.html" class="dropdown-item">How It Works</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                        Student
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="find-seat.html" class="dropdown-item">Find My Seat</a></li>
+                        <li><a href="timetable.html" class="dropdown-item">Timetable</a></li>
+                        <li><a href="venues.html" class="dropdown-item">Examination Venues</a></li>
+                        <li><a href="announcements.html" class="dropdown-item">Announcements</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="profile.html" class="dropdown-item">My Profile</a></li>
+                        <li><a href="settings.html" class="dropdown-item">Settings</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="staff-login.html" class="nav-link">Staff Portal</a>
+                </li>
+                <li class="nav-item ms-lg-2">
+                    <a href="login.html" class="btn btn-danger rounded-pill px-4">Login</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</nav>
+
+    <!-- ================== MAIN CONTENT ================== -->
+
+    <main class="esf-main">
+
+        <!-- HERO -->
+
+        <section class="esf-hero">
+
+            <div class="container-fluid">
+
+                <div class="esf-hero-content">
+
+                    <span class="badge bg-danger mb-3">
+                        EXAMINATION MANAGEMENT SYSTEM
+                    </span>
+
+                    <h1>
+                        Find Your <span>Examination Seat</span> Easily.
+                    </h1>
+
+                    <p class="mt-4">
+                        Exam seat finder helps students quickly locate their examination seat, exxamination venue, course, date and time from one platform.
+                    </p>
+
+                    <div class="mt-4 d-flex gap-3 flex-wrap">
+
+                        <a href="student/find-seat.html" class="btn esf-btn-primary">
+
+                            Find My Seat
+
+                        </a>
+
+                        <a href="student/timetable.html" class="btn esf-btn-danger">
+
+                            View Timetable
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="map-pin pin-one"></div>
+
+            <div class="map-pin pin-two"></div>
+
+        </section>
+
+        <!-- FEATURES -->
+
+        <section class="esf-section">
+
+            <div class="esf-secion-title">
+
+                <h2>
+                    Everything You Need Before Your Exam
+                </h2>
+
+                <p>
+                    Quickly access the most important examination information.
+                </p>
+
+            </div>
+
+            <div class="container-fluid">
+
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="esf-card">
+
+                            <div class="esf-card-icon">
+                                SF
+                            </div>
+
+                            <h3>
+                                Find My Seat
+                            </h3>
+
+                            <p>
+                                Find your assigned examination seat using your student information.
+                            </p>
+
+                            <a href="student/find-seat.html" class="btn esf-btn-primary">
+
+                                Find Seat
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="esf-card">
+
+                            <div class="esf-card-icon">
+                                TM
+                            </div>
+
+                            <h3>
+                                Timetable
+                            </h3>
+
+                            <p>
+                                View your examination course, date and examination time.
+                            </p>
+
+                            <a href="student/timetable.html" class="btn esf-btn-primary">
+
+                                View TimeTable
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="esf-card">
+
+                            <div class="esf-card-icon">
+                                VN
+                            </div>
+
+                            <h3>
+                                Venues
+                            </h3>
+
+                            <p>
+                                View examination venues and important location information.
+                            </p>
+
+                            <a href="student/venue.html" class="btn esf-btn-primary">
+
+                                View Venues
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-xl-3">
+
+                        <div class="esf-card">
+
+                            <div class="esf-card-icon">
+                                AN
+                            </div>
+
+                            <h3>
+                                Announcements
+                            </h3>
+
+                            <p>
+                                Stay updated with important examination announcements.
+                            </p>
+
+                            <a href="student/announcements.html" class="btn esf-btn-primary">
+
+                                View Updates
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- QUICK INFORMATION -->
+
+        <section class="esf-section pt-0">
+
+            <div class="container-fluid">
+
+                <div class="row g-4">
+
+                    <div class="col-lg-7">
+
+                        <div class="esf-card">
+
+                            <h2>
+                                Your Examination Journey
+                            </h2>
+
+                            <p>
+                                Exam seat finder brings your examination infirmation together in on convenient platform.
+                            </p>
+
+                            <div class="mt-4">
+
+                                <div class="d-flex gap-3 mb-4">
+
+                                    <div class="esf-card-icon">
+                                        1
+                                    </div>
+
+                                    <h4>
+                                        Sign In
+                                    </h4>
+
+                                    <p>
+                                        Enter your student authenticationdetails
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex gap-3 mb-4">
+
+                                <div class="esf-card-icon">
+                                    2
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Verify Identity
+                                    </h4>
+
+                                    <p>
+                                        Complete the required biometric verification.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="d-flex gap-3">
+
+                                <div class="esf-card-icon">
+                                    3
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Find Your Seat
+                                    </h4>
+
+                                    <p>
+                                        View your assigned examination information.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5">
+
+                    <div class="esf-card">
+
+                        <h3>
+                            Important
+                        </h3>
+
+                        <p>
+                            Make sure your examination requirementhave been completed before checking your seat.
+                        </p>
+
+                        <a href="student/instructions.html" class="btn esf-btn-danger">
+
+                            Read Instructions
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="esf-footer">
+
+            <div class="container-fluid text-center">
+
+                <div class="exam-logo justify-content-center">
+
+                    <span class="brand-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    </span>
+
+
+                    <span>EXAM <strong>SEAT</strong> FINDER</span>
+
+                </div>
+
+                <p class="mt-3 mb-0">
+                    Secure. Simple. Accessible.
+                </p>
+
+                <div class="footer-icons">
+
+                    <a href="about.html" class="footer-icon">
+
+                        A
+
+                    </a>
+
+                    <a href="contact.html" class="footer-icon">
+
+                        C
+
+                    </a>
+
+                    <a href="instructions.html" class="footer-icon">
+
+                        I
+
+                    </a>
+
+                </div>
+
+                <hr class="my-4">
+
+                <p class="mb-0">
+                    &copy; 2026 Exam Seat Finder. All rights Reserved.
+                </p>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</body>
+
+<!-- BOOTSRAP JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+</script>
+
+</html>

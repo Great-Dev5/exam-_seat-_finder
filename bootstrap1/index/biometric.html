@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOMETRIC VERIFICATION | EXAM SEAT FINDER</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d6efd'/%3E%3Ccircle cx='32' cy='28' r='8' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 8 L45 16 L45 28 C45 40 39 48 32 53 C25 48 19 40 19 28 L19 16 Z' fill='%23ffffff'/%3E%3Ccircle cx='32' cy='28' r='6' fill='%23dc3545'/%3E%3Ccircle cx='32' cy='28' r='3' fill='%23ffffff'/%3E%3Cpath d='M29 20 L35 20 L35 26 L29 26 Z' fill='%23ffffff' opacity='0.3'/%3E%3C/svg%3E">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/my project/bootstrap1/css/authentication.css">
+
+</head>
+
+<body class="auth-page">
+
+    <div class="container">
+        <div class="auth-container">
+            <div class="auth-form-panel">
+                <div class="text-center">
+                    <a href="index.html" class="esf-brand-logo justify-content-center">
+                        <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                        <span class="brand-text">EXAM <strong>SEAT</strong> FINDER</span>
+                    </a>
+                    <h2 class="mt-4"><i class="bi bi-fingerprint me-2"></i>Biometric Verification</h2>
+                    <p class="text-secondary">Verify your identity before accessing the examination portal.</p>
+                </div>
+
+                <div class="row g-4 mt-3">
+                    <div class="col-md-6">
+                        <div class="biometric-option text-center">
+                            <div class="biometric-icon"><i class="bi bi-fingerprint"></i></div>
+                            <h4>Fingerprint</h4>
+                            <p class="text-secondary">Verify Using Fingerprint.</p>
+                            <button class="btn btn-primary" type="button" id="fingerprintButton">
+                                <i class="bi bi-fingerprint me-2"></i>Verify Fingerprint
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="biometric-option text-center">
+                            <div class="biometric-icon"><i class="bi bi-person-badge"></i></div>
+                            <h4>Facial Verification</h4>
+                            <p class="text-secondary">Verify Using Facial Recognition.</p>
+                            <button class="btn btn-danger" type="button" id="faceButton">
+                                <i class="bi bi-camera me-2"></i>Verify Face
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="biometricMessage" class="text-center mt-4"></div>
+                
+                <p class="text-center mt-3 text-secondary small">
+                    <i class="bi bi-shield-lock-fill me-1"></i> 
+                    Your biometric data is encrypted and securely stored.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('fingerprintButton').addEventListener('click', function() {
+            document.getElementById('biometricMessage').innerHTML = `
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    Please place your finger on the scanner...
+                    <div class="progress mt-2" style="height: 4px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%;"></div>
+                    </div>
+                </div>
+            `;
+            setTimeout(() => {
+                document.getElementById('biometricMessage').innerHTML = `
+                    <div class="alert alert-success">
+                        <i class="bi bi-check-circle-fill me-2"></i>
+                        Fingerprint verification successful! You are now verified.
+                    </div>
+                `;
+            }, 3000);
+        });
+
+        document.getElementById('faceButton').addEventListener('click', function() {
+            document.getElementById('biometricMessage').innerHTML = `
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    Please look at the camera for facial recognition...
+                    <div class="progress mt-2" style="height: 4px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%;"></div>
+                    </div>
+                </div>
+            `;
+            setTimeout(() => {
+                document.getElementById('biometricMessage').innerHTML = `
+                    <div class="alert alert-success">
+                        <i class="bi bi-check-circle-fill me-2"></i>
+                        Facial verification successful! You are now verified.
+                    </div>
+                `;
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>

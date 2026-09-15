@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT AAU | EXAM SEAT FINDER</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d6efd'/%3E%3Ccircle cx='32' cy='28' r='8' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 8 L45 16 L45 28 C45 40 39 48 32 53 C25 48 19 40 19 28 L19 16 Z' fill='%23ffffff'/%3E%3Ccircle cx='32' cy='28' r='6' fill='%23dc3545'/%3E%3Ccircle cx='32' cy='28' r='3' fill='%23ffffff'/%3E%3Cpath d='M29 20 L35 20 L35 26 L29 26 Z' fill='%23ffffff' opacity='0.3'/%3E%3C/svg%3E">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/my project/bootstrap1/css/project.css">
+
+</head>
+
+<body>
+
+   <!-- ==================== NAVIGATION BAR ==================== -->
+
+
+<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+    <div class="container-fluid px-3 px-lg-4">
+
+        <!-- Menu Toggle - Opens Sidebar -->
+
+        <button class="menu-toggle me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+            <span class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+
+        <a href="index.html" class="navbar-brand">
+
+            <span class="esf-brand-logo">
+                <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <span class="brand-text">EXAM <strong>SEAT</strong> FINDER</span>
+            </span>
+
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="topNavigation">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about-aau.html" class="dropdown-item"><i class="bi bi-building"></i> About AAU</a></li>
+                        <li><a href="instructions.html" class="dropdown-item"><i class="bi bi-question-circle"></i> How It Works</a></li>
+                        <li><a href="online-exam-process.html" class="dropdown-item"><i class="bi bi-laptop"></i> Online Exam Process</a></li>
+                        <li><a href="mission-vision.html" class="dropdown-item"><i class="bi bi-eye"></i> Mission &amp; Vision</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Student
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="find-seat.html" class="dropdown-item"><i class="bi bi-search"></i> Find My Seat</a></li>
+                        <li><a href="timetable.html" class="dropdown-item"><i class="bi bi-calendar"></i> Timetable</a></li>
+                        <li><a href="venues.html" class="dropdown-item"><i class="bi bi-geo-alt"></i> Examination Venues</a></li>
+                        <li><a href="announcement.html" class="dropdown-item"><i class="bi bi-megaphone"></i> Announcements</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="profile.html" class="dropdown-item"><i class="bi bi-person"></i> My Profile</a></li>
+                        <li><a href="settings.html" class="dropdown-item"><i class="bi bi-gear"></i> Settings</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="staff-login.html" class="nav-link">Staff Portal</a></li>
+                <li class="nav-item ms-lg-2">
+                    <a href="profile.html" class="user-profile-btn">
+                        <span class="avatar"><i class="bi bi-person-fill"></i></span>
+                        <span class="profile-text">Osamudiamen E.</span>
+                        <span class="dropdown-arrow"><i class="bi bi-chevron-down"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== SIDEBAR (Bootstrap Offcanvas) ==================== -->
+
+
+<div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+    <div class="sidebar-header">
+        <a href="index.html" class="esf-brand-logo">
+            <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+            <span class="brand-text">EXAM <strong>SEAT</strong> FINDER</span>
+        </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <ul class="nav flex-column gap-1">
+        <li><a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a></li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-journal-bookmark-fill"></i> Examination
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="find-seat.html" class="dropdown-item">Find My Seat</a></li>
+                <li><a href="timetable.html" class="dropdown-item">Examination Timetable</a></li>
+                <li><a href="venues.html" class="dropdown-item">Examination Venues</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-info-circle-fill"></i> Information
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="announcement.html" class="dropdown-item">Announcements</a></li>
+                <li><a href="instructions.html" class="dropdown-item">Examination Instructions</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-check-fill"></i> My Account
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="profile.html" class="dropdown-item">Profile</a></li>
+                <li><a href="settings.html" class="dropdown-item">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="login.html" class="dropdown-item text-danger"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="esf-main">
+        <section class="esf-page-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1>About Ambrose Alli University</h1>
+                        <p>Discover the history, mission, and excellence of AAU, Ekpoma.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="180" height="100">
+                            <rect x="10" y="20" width="180" height="80" rx="4" fill="rgba(255,255,255,0.1)"/>
+                            <rect x="30" y="35" width="140" height="50" rx="3" fill="rgba(255,255,255,0.05)"/>
+                            <rect x="50" y="45" width="100" height="8" rx="2" fill="rgba(255,255,255,0.15)"/>
+                            <rect x="50" y="58" width="70" height="8" rx="2" fill="rgba(255,255,255,0.1)"/>
+                            <rect x="50" y="71" width="85" height="8" rx="2" fill="rgba(255,255,255,0.1)"/>
+                            <circle cx="80" cy="100" r="4" fill="rgba(255,255,255,0.2)"/>
+                            <circle cx="120" cy="100" r="4" fill="rgba(255,255,255,0.2)"/>
+                            <text x="100" y="18" font-family="'Inter',sans-serif" font-size="10" fill="rgba(255,255,255,0.3)" text-anchor="middle">AAU</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="esf-card">
+                        <div class="esf-card-body">
+                            <h2 class="fw-bold">About Ambrose Alli University</h2>
+                            <p class="mt-3">Ambrose Alli University (AAU), Ekpoma, is a state-owned university located in Ekpoma, Edo State, Nigeria. The university was established in 1981 by Professor Ambrose Folorunsho Alli, who was the Governor of the old Bendel State at the time. The university's motto is "Knowledge for Advancement."</p>
+
+                            <p>The institution's name has changed over time to reflect its history. It was originally founded as Bendel State University in 1981. In 1992, it was renamed Edo State University. Finally, it was named Ambrose Alli University in honor of its founder, Professor Ambrose Folorunsho Alli, who was a visionary leader and educationist.</p>
+
+                            <p>The university's main campus is situated along the Benin-Auchi Road in Ekpoma. Its permanent site was established on a large parcel of land provided by the local community. Over the years, the university has grown significantly with newer buildings, including a complex for the Faculty of Life Sciences completed in 2018. The campus continues to expand with modern facilities to accommodate the growing student population.</p>
+
+                            <h3 class="fw-bold mt-4">Academic Structure</h3>
+                            <p>AAU offers a wide range of undergraduate and postgraduate programs across 14 faculties. Some of its prominent faculties include:</p>
+                            <ul>
+                                <li><strong>Faculty of Arts:</strong> Offers programs in English, History and International Studies, Modern Languages (e.g., French), Philosophy, Religious and Cultural Studies, and Theatre and Media Arts.</li>
+                                <li><strong>Faculty of Physical Sciences:</strong> Includes departments like Mathematics and Statistics, which offer specialized degrees in Mathematics, Industrial Mathematics, and Statistics.</li>
+                                <li><strong>Faculty of Engineering:</strong> Provides professional degrees in fields like Civil Engineering, with a curriculum designed to combine theoretical foundations with practical skills.</li>
+                                <li><strong>Other Faculties:</strong> The university also has faculties dedicated to Agriculture, Law, Management Sciences, Social Sciences, Medicine, and Clinical Sciences, among others.</li>
+                            </ul>
+
+                            <p>The institution is fully accredited and its programs are recognized by the National Universities Commission (NUC), ensuring that students receive quality education that meets national and international standards.</p>
+
+                            <h3 class="fw-bold mt-4">Leadership and Recent Developments</h3>
+                            <p>The current acting Vice-Chancellor is Professor Asomwan Sonnie Adagbonyin, who was appointed in February 2022. Under his leadership, the university has seen significant progress and development. In recent news, the university management has publicly thanked the Edo State Government for increasing investment in the institution, which has helped resolve previous issues and allowed for progress, including the induction of medical and nursing students.</p>
+
+                            <p>The university continues to make strides in academic excellence, research, and community development. It remains committed to producing graduates who are not only academically sound but also equipped with the skills and values needed to contribute meaningfully to society.</p>
+
+                            <h3 class="fw-bold mt-4">Notable Alumni</h3>
+                            <p>AAU has produced many distinguished alumni who have made significant contributions in various fields. A few notable names include:</p>
+                            <ul>
+                                <li><strong>Aisha Buhari:</strong> Wife of the former president of Nigeria, known for her philanthropic work and advocacy for women and children.</li>
+                                <li><strong>Tony Elumelu:</strong> A prominent Nigerian investor, philanthropist, and entrepreneur who is the founder of the Tony Elumelu Foundation.</li>
+                                <li><strong>Don Jazzy:</strong> Renowned singer, music producer, and entrepreneur who has made significant contributions to the Nigerian music industry.</li>
+                                <li><strong>Festus Keyamo:</strong> A Senior Advocate of Nigeria (SAN), human rights activist, and politician who has been instrumental in various legal and political developments in Nigeria.</li>
+                            </ul>
+
+                            <p>These alumni serve as role models and ambassadors of the university, showcasing the quality of education and character instilled at AAU.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="esf-card">
+                        <div class="esf-card-header">Quick Facts</div>
+                        <div class="esf-card-body">
+                            <p><strong>Established:</strong> 1981</p>
+                            <p><strong>Founder:</strong> Prof. Ambrose Folorunsho Alli</p>
+                            <p><strong>Location:</strong> Ekpoma, Edo State, Nigeria</p>
+                            <p><strong>Motto:</strong> "Knowledge for Advancement"</p>
+                            <p><strong>Faculties:</strong> 14</p>
+                            <p><strong>Accreditation:</strong> NUC</p>
+                            <p><strong>Vice-Chancellor:</strong> Prof. Mrs. Eunice Eboserehimen Omonzejie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="esf-footer">
+        <div class="container-fluid">
+            <a href="index.html" class="footer-logo">
+                <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <span>EXAM <strong>SEAT</strong> FINDER</span>
+            </a>
+            <p class="footer-tagline">Secure. Simple. Accessible.</p>
+            <div class="footer-icons">
+                <a href="about-aau.html" class="footer-icon"><i class="bi bi-building"></i></a>
+                <a href="contact.html" class="footer-icon"><i class="bi bi-envelope"></i></a>
+                <a href="instructions.html" class="footer-icon"><i class="bi bi-question-circle"></i></a>
+                <a href="online-exam-process.html" class="footer-icon"><i class="bi bi-laptop"></i></a>
+                <a href="mission-vision.html" class="footer-icon"><i class="bi bi-eye"></i></a>
+            </div>
+            <hr>
+            <p class="footer-copyright">&copy; 2026 Exam Seat Finder. All rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

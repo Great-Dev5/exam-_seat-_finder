@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERIFY IDENTITY | EXAM SEAT FINDER</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d6efd'/%3E%3Ccircle cx='32' cy='28' r='8' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 8 L45 16 L45 28 C45 40 39 48 32 53 C25 48 19 40 19 28 L19 16 Z' fill='%23ffffff'/%3E%3Ccircle cx='32' cy='28' r='6' fill='%23dc3545'/%3E%3Ccircle cx='32' cy='28' r='3' fill='%23ffffff'/%3E%3Cpath d='M29 20 L35 20 L35 26 L29 26 Z' fill='%23ffffff' opacity='0.3'/%3E%3C/svg%3E">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/my project/bootstrap1/css/project.css">
+    <link rel="stylesheet" href="/my project/bootstrap1/css/security.css">
+
+</head>
+
+<body class="auth-page">
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+
+    <nav class="navbar navbar-expand-lg main-navbar fixed-top">
+        <div class="container-fluid px-3 px-lg-4">
+
+            <!-- Menu Toggle - Opens Sidebar -->
+            <button class="menu-toggle me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <span class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+
+            <a href="index.html" class="navbar-brand">
+                <span class="esf-brand-logo">
+                    <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                    <span class="brand-text">EXAM <strong>SEAT</strong> FINDER</span>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="topNavigation">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about-aau.html" class="dropdown-item"><i class="bi bi-building"></i> About AAU</a></li>
+                            <li><a href="instructions.html" class="dropdown-item"><i class="bi bi-question-circle"></i> How It Works</a></li>
+                            <li><a href="online-exam-process.html" class="dropdown-item"><i class="bi bi-laptop"></i> Online Exam Process</a></li>
+                            <li><a href="mission-vision.html" class="dropdown-item"><i class="bi bi-eye"></i> Mission &amp; Vision</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Student
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="find-seat.html" class="dropdown-item"><i class="bi bi-search"></i> Find My Seat</a></li>
+                            <li><a href="timetable.html" class="dropdown-item"><i class="bi bi-calendar"></i> Timetable</a></li>
+                            <li><a href="venues.html" class="dropdown-item"><i class="bi bi-geo-alt"></i> Examination Venues</a></li>
+                            <li><a href="announcement.html" class="dropdown-item"><i class="bi bi-megaphone"></i> Announcements</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a href="profile.html" class="dropdown-item"><i class="bi bi-person"></i> My Profile</a></li>
+                            <li><a href="settings.html" class="dropdown-item"><i class="bi bi-gear"></i> Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="staff-login.html" class="nav-link">Staff Portal</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a href="profile.html" class="user-profile-btn">
+                            <span class="avatar"><i class="bi bi-person-fill"></i></span>
+                            <span class="profile-text">Okafor C.</span>
+                            <span class="dropdown-arrow"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== SIDEBAR (Bootstrap Offcanvas) ==================== -->
+
+    <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="sidebar-header">
+            <a href="index.html" class="esf-brand-logo">
+                <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <span class="brand-text">EXAM <strong>SEAT</strong> FINDER</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <ul class="nav flex-column gap-1">
+            <li><a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-journal-bookmark-fill"></i> Examination
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="find-seat.html" class="dropdown-item">Find My Seat</a></li>
+                    <li><a href="timetable.html" class="dropdown-item">Examination Timetable</a></li>
+                    <li><a href="venues.html" class="dropdown-item">Examination Venues</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-info-circle-fill"></i> Information
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="announcement.html" class="dropdown-item">Announcements</a></li>
+                    <li><a href="instructions.html" class="dropdown-item">Examination Instructions</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-check-fill"></i> My Account
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="profile.html" class="dropdown-item">Profile</a></li>
+                    <li><a href="settings.html" class="dropdown-item">Settings</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a href="login.html" class="dropdown-item text-danger"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="esf-main">
+        <div class="container">
+            <div class="verification-container">
+                
+                <!-- Security Badge -->
+                <span class="security-badge security-badge-success">
+                    <i class="bi bi-shield-check"></i> Identity Verification
+                </span>
+                
+                <h2 class="mt-4"><i class="bi bi-person-check-fill me-2"></i>Verify Your Identity</h2>
+                <p class="text-secondary">Please confirm this is you before proceeding.</p>
+                
+                <!-- Student Photo -->
+                <div class="position-relative d-inline-block">
+                    <div class="verification-photo d-flex align-items-center justify-content-center" style="background: var(--gradient-primary); font-size: 4rem; color: #ffffff;">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <span class="position-absolute bottom-0 end-0 bg-success rounded-circle p-1" style="border: 3px solid #ffffff;">
+                        <i class="bi bi-camera-fill text-white" style="font-size: 0.8rem;"></i>
+                    </span>
+                </div>
+                
+                <!-- Student Info -->
+                <div class="mt-3">
+                    <h4 class="fw-bold">Osamudiamen Eromosele</h4>
+                    <p class="text-secondary">
+                        <i class="bi bi-card-list me-1"></i> Matric: FPS/CSC/23/82431<br>
+                        <i class="bi bi-person-badge me-1"></i> Student ID: E1148311
+                    </p>
+                </div>
+                
+                <!-- Behavior Indicator -->
+                <div class="behavior-indicator mb-4">
+                    <span class="dot"></span>
+                    <span>Behavioral pattern verified</span>
+                </div>
+                
+                <!-- Verification Actions -->
+                <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+                    <button class="btn esf-btn-primary" onclick="confirmIdentity()">
+                        <i class="bi bi-check-circle"></i> Yes, This is Me
+                    </button>
+                    <button class="btn esf-btn-danger" onclick="reportImpersonation()">
+                        <i class="bi bi-shield-exclamation"></i> Not Me!
+                    </button>
+                </div>
+                
+                <p class="text-muted mt-3 small">
+                    <i class="bi bi-shield-lock"></i> 
+                    If this is not you, someone may be trying to impersonate you. 
+                    Please report immediately.
+                </p>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="esf-footer">
+        <div class="container-fluid">
+            <a href="index.html" class="footer-logo">
+                <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <span>EXAM <strong>SEAT</strong> FINDER</span>
+            </a>
+            <p class="footer-tagline">Secure. Simple. Accessible.</p>
+            <div class="footer-icons">
+                <a href="about-aau.html" class="footer-icon"><i class="bi bi-building"></i></a>
+                <a href="contact.html" class="footer-icon"><i class="bi bi-envelope"></i></a>
+                <a href="instructions.html" class="footer-icon"><i class="bi bi-question-circle"></i></a>
+                <a href="online-exam-process.html" class="footer-icon"><i class="bi bi-laptop"></i></a>
+                <a href="mission-vision.html" class="footer-icon"><i class="bi bi-eye"></i></a>
+            </div>
+            <hr>
+            <p class="footer-copyright">&copy; 2026 Exam Seat Finder. All rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== BOOTSTRAP JS ==================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- ==================== SIDEBAR JS ==================== -->
+
+    <script src="/my project/HTML/js/sidebar.js"></script>
+
+    <!-- <script>
+        function confirmIdentity() {
+            alert('✅ Identity confirmed! Redirecting to dashboard...');
+            window.location.href = '/index.html';
+        }
+
+        function reportImpersonation() {
+            if (confirm('⚠️ Are you sure this is not you? This will alert the exam officials.')) {
+                alert('🚨 Alert sent to exam officials. You will be redirected to the security page.');
+                window.location.href = '/security-alert.html';
+            }
+        }
+    </script> -->
+
+</body>
+</html>
