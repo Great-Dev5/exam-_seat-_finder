@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exam Seat Finder - Find your examination seat, venue, time, and examination information.">
+    <title>HOME | EXAM SEAT FINDER</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d6efd'/%3E%3Ccircle cx='32' cy='28' r='8' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 8 L45 16 L45 28 C45 40 39 48 32 53 C25 48 19 40 19 28 L19 16 Z' fill='%23ffffff'/%3E%3Ccircle cx='32' cy='28' r='6' fill='%23dc3545'/%3E%3Ccircle cx='32' cy='28' r='3' fill='%23ffffff'/%3E%3Cpath d='M29 20 L35 20 L35 26 L29 26 Z' fill='%23ffffff' opacity='0.3'/%3E%3C/svg%3E">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/student.css">
+
+</head>
+
+<body class="page-home">
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+
+    <nav class="navbar navbar-expand-lg main-navbar fixed-top">
+        <div class="container-fluid px-3 px-lg-4">
+
+            <!-- Menu Toggle -->
+            <button class="menu-toggle me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <span class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+
+            <a href="index.html" class="navbar-brand">
+                <span class="esf-brand-logo">
+                    <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                    <span class="brand-text">EXAM <strong>SEAT</strong> FINDER</span>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="topNavigation">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about-aau.html" class="dropdown-item"><i class="bi bi-building"></i> About AAU</a></li>
+                            <li><a href="instructions.html" class="dropdown-item"><i class="bi bi-question-circle"></i> How It Works</a></li>
+                            <li><a href="online-exam-process.html" class="dropdown-item"><i class="bi bi-laptop"></i> Online Exam Process</a></li>
+                            <li><a href="mission-vision.html" class="dropdown-item"><i class="bi bi-eye"></i> Mission &amp; Vision</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                            Student
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="find-seat.html" class="dropdown-item"><i class="bi bi-search"></i> Find My Seat</a></li>
+                            <li><a href="timetable.html" class="dropdown-item"><i class="bi bi-calendar"></i> Timetable</a></li>
+                            <li><a href="venues.html" class="dropdown-item"><i class="bi bi-geo-alt"></i> Examination Venues</a></li>
+                            <li><a href="announcement.html" class="dropdown-item"><i class="bi bi-megaphone"></i> Announcements</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a href="profile.html" class="dropdown-item"><i class="bi bi-person"></i> My Profile</a></li>
+                            <li><a href="settings.html" class="dropdown-item"><i class="bi bi-gear"></i> Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="staff-login.html" class="nav-link">Staff Portal</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a href="profile.html" class="user-profile-btn">
+                            <span class="avatar"><i class="bi bi-person-fill"></i></span>
+                            <span class="profile-text">Osamudiamen E.</span>
+                            <span class="dropdown-arrow"><i class="bi bi-chevron-down"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== SIDEBAR - Bootstrap Offcanvas ==================== -->
+
+    <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="sidebar-header">
+            <a href="index.html" class="esf-brand-logo">
+                <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <span class="brand-text">EXAM <strong>SEAT</strong> FINDER</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <ul class="nav flex-column gap-1">
+            <li><a href="index.html" class="nav-link active"><i class="bi bi-house-fill"></i> Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-journal-bookmark-fill"></i> Examination
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="find-seat.html" class="dropdown-item">Find My Seat</a></li>
+                    <li><a href="timetable.html" class="dropdown-item">Examination Timetable</a></li>
+                    <li><a href="venues.html" class="dropdown-item">Examination Venues</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-info-circle-fill"></i> Information
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="announcement.html" class="dropdown-item">Announcements</a></li>
+                    <li><a href="instructions.html" class="dropdown-item">Examination Instructions</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-check-fill"></i> My Account
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="profile.html" class="dropdown-item">Profile</a></li>
+                    <li><a href="settings.html" class="dropdown-item">Settings</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a href="login.html" class="dropdown-item text-danger"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+
+    <main class="esf-main">
+
+        <!-- ==================== HERO SECTION ==================== -->
+
+        <section class="esf-hero">
+
+            <!-- BACKGROUND - Seat with Search Icon and Number -->
+            <div class="hero-background">
+                <div class="hero-bg-static">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                        <defs>
+                            <linearGradient id="bgHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0a0a2e;stop-opacity:1"/>
+                                <stop offset="40%" style="stop-color:#0d6efd;stop-opacity:0.3"/>
+                                <stop offset="100%" style="stop-color:#0a0a2e;stop-opacity:1"/>
+                            </linearGradient>
+                            <radialGradient id="glowHero" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#0d6efd;stop-opacity:0.10"/>
+                                <stop offset="100%" style="stop-color:#0d6efd;stop-opacity:0"/>
+                            </radialGradient>
+                            <linearGradient id="chairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0d6efd;stop-opacity:0.15"/>
+                                <stop offset="100%" style="stop-color:#0d6efd;stop-opacity:0.05"/>
+                            </linearGradient>
+                            <linearGradient id="seatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#dc3545;stop-opacity:0.12"/>
+                                <stop offset="100%" style="stop-color:#dc3545;stop-opacity:0.04"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Base Background -->
+
+                        <rect width="1920" height="1080" fill="url(#bgHero)"/>
+                        <circle cx="960" cy="540" r="700" fill="url(#glowHero)"/>
+
+                        <!-- ===== CHAIR GROUP - MOVED HIGHER (y=380) ===== -->
+
+                        <g transform="translate(960, 380)">
+                            <!-- Outer glow -->
+                            <ellipse cx="0" cy="-20" rx="300" ry="380" fill="rgba(13,110,253,0.03)"/>
+                            
+                            <!-- Chair Back -->
+
+                            <rect x="-180" y="-350" width="360" height="280" rx="20" fill="url(#chairGrad)" stroke="rgba(13,110,253,0.08)" stroke-width="2"/>
+                            <rect x="-160" y="-330" width="320" height="240" rx="12" fill="rgba(255,255,255,0.02)"/>
+                            
+                            <!-- Chair Back Lines -->
+
+                            <line x1="-140" y1="-310" x2="-140" y2="-110" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
+                            <line x1="-100" y1="-310" x2="-100" y2="-110" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
+                            <line x1="-60" y1="-310" x2="-60" y2="-110" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
+                            <line x1="-20" y1="-310" x2="-20" y2="-110" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
+                            <line x1="20" y1="-310" x2="20" y2="-110" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
+                            <line x1="60" y1="-310" x2="60" y2="-110" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
+                            <line x1="100" y1="-310" x2="100" y2="-110" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
+                            <line x1="140" y1="-310" x2="140" y2="-110" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
+                            
+                            <!-- Chair Seat -->
+
+                            <rect x="-200" y="-70" width="400" height="100" rx="14" fill="url(#seatGrad)" stroke="rgba(220,53,69,0.08)" stroke-width="2"/>
+                            <rect x="-180" y="-55" width="360" height="70" rx="8" fill="rgba(255,255,255,0.02)"/>
+                            
+                            <!-- Chair Legs -->
+
+                            <rect x="-170" y="30" width="20" height="80" rx="6" fill="rgba(26,26,78,0.3)" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+                            <rect x="150" y="30" width="20" height="80" rx="6" fill="rgba(26,26,78,0.3)" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+                            <rect x="-155" y="30" width="10" height="70" rx="4" fill="rgba(26,26,78,0.2)"/>
+                            <rect x="145" y="30" width="10" height="70" rx="4" fill="rgba(26,26,78,0.2)"/>
+                            
+                            <!-- Armrests -->
+
+                            <rect x="-230" y="-220" width="50" height="160" rx="10" fill="rgba(13,110,253,0.06)" stroke="rgba(13,110,253,0.05)" stroke-width="1"/>
+                            <rect x="180" y="-220" width="50" height="160" rx="10" fill="rgba(13,110,253,0.06)" stroke="rgba(13,110,253,0.05)" stroke-width="1"/>
+                            
+                            <!-- SEAT NUMBER - Large -->
+
+                            <text x="0" y="-170" font-family="'Inter',sans-serif" font-size="140" font-weight="900" fill="rgba(255,255,255,0.08)" text-anchor="middle" letter-spacing="4">A01</text>
+                            
+                            <!-- Search Icon -->
+
+                            <g transform="translate(0, -40)" opacity="0.12">
+                                <circle cx="0" cy="0" r="45" fill="none" stroke="#0d6efd" stroke-width="3"/>
+                                <line x1="30" y1="30" x2="55" y2="55" stroke="#0d6efd" stroke-width="4" stroke-linecap="round"/>
+                            </g>
+                            
+                            <!-- Small Text under icon -->
+
+                            <text x="0" y="110" font-family="'Inter',sans-serif" font-size="16" font-weight="400" fill="rgba(255,255,255,0.10)" text-anchor="middle" letter-spacing="6">FIND YOUR SEAT</text>
+                        </g>
+
+                        <!-- Decorative Dots -->
+
+                        <circle cx="200" cy="200" r="3" fill="rgba(255,255,255,0.04)"/>
+                        <circle cx="250" cy="250" r="2" fill="rgba(255,255,255,0.03)"/>
+                        <circle cx="350" cy="180" r="4" fill="rgba(255,255,255,0.03)"/>
+                        <circle cx="1600" cy="200" r="3" fill="rgba(255,255,255,0.04)"/>
+                        <circle cx="1650" cy="250" r="2" fill="rgba(255,255,255,0.03)"/>
+                        <circle cx="1750" cy="180" r="4" fill="rgba(255,255,255,0.03)"/>
+                        <circle cx="300" cy="800" r="3" fill="rgba(255,255,255,0.03)"/>
+                        <circle cx="400" cy="850" r="2" fill="rgba(255,255,255,0.02)"/>
+                        <circle cx="1550" cy="800" r="3" fill="rgba(255,255,255,0.03)"/>
+                        <circle cx="1650" cy="850" r="2" fill="rgba(255,255,255,0.02)"/>
+
+                        <!-- ===== AAU TEXTS - PLACED AT BOTTOM ===== -->
+
+                        <text x="960" y="985" font-family="'Inter',sans-serif" font-size="34" font-weight="700" fill="rgba(255,255,255,0.18)" text-anchor="middle" letter-spacing="10">AMBROSE ALLI UNIVERSITY</text>
+                        <text x="960" y="1020" font-family="'Inter',sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.10)" text-anchor="middle" letter-spacing="6">EST. 1981 • EKPOMA, EDO STATE</text>
+                        
+                        <!-- Bottom Decorative Line -->
+
+                        <line x1="760" y1="965" x2="1160" y2="965" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                    </svg>
+                </div>
+
+                <!-- OVERLAY -->
+
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- ===== HERO CONTENT - LARGER TEXT ===== -->
+
+            <div class="esf-hero-content">
+                <span class="badge bg-danger mb-3">EXAMINATION MANAGEMENT SYSTEM</span>
+                <h1>Find Your <span>Examination Seat</span> Easily.</h1>
+                <p class="hero-description">Exam seat finder helps students quickly locate their examination seat, examination venue, course, date and time from one platform.</p>
+                <div class="btn-group d-flex gap-3 flex-wrap justify-content-center">
+                    <a href="find-seat.html" class="btn esf-btn-primary btn-lg">Find My Seat</a>
+                    <a href="timetable.html" class="btn esf-btn-danger btn-lg">View Timetable</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ==================== FEATURES SECTION ==================== -->
+
+        <section class="esf-section" style="background: #f8faff;">
+            <div class="esf-section-title">
+                <h2>Everything You Need Before Your Exam</h2>
+                <p>Quickly access the most important examination information.</p>
+            </div>
+            <div class="container-fluid">
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="esf-card">
+                            <div class="esf-card-icon"><i class="bi bi-search"></i></div>
+                            <h3>Find My Seat</h3>
+                            <p>Find your assigned examination seat using your student information.</p>
+                            <a href="find-seat.html" class="btn esf-btn-primary">Find Seat</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="esf-card">
+                            <div class="esf-card-icon"><i class="bi bi-calendar3"></i></div>
+                            <h3>Timetable</h3>
+                            <p>View your examination course, date and examination time.</p>
+                            <a href="timetable.html" class="btn esf-btn-primary">View Timetable</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="esf-card">
+                            <div class="esf-card-icon"><i class="bi bi-geo-alt"></i></div>
+                            <h3>Venues</h3>
+                            <p>View examination venues and important location information.</p>
+                            <a href="venues.html" class="btn esf-btn-primary">View Venues</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <div class="esf-card">
+                            <div class="esf-card-icon"><i class="bi bi-megaphone"></i></div>
+                            <h3>Announcements</h3>
+                            <p>Stay updated with important examination announcements.</p>
+                            <a href="announcement.html" class="btn esf-btn-primary">View Updates</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== HOW IT WORKS SECTION ==================== -->
+
+        <section class="esf-section pt-0" style="background: #f8faff;">
+            <div class="container-fluid">
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div class="esf-card">
+                            <h2>How It Works</h2>
+                            <p>Exam Seat Finder brings your examination information together in one convenient platform. Follow these simple steps to access your examination details quickly and securely.</p>
+                            <div class="mt-4">
+                                <div class="d-flex gap-3 mb-4">
+                                    <div class="esf-card-icon">1</div>
+                                    <div>
+                                        <h4>Register Account</h4>
+                                        <p>Create your student account and complete your registration. Ensure all your details are correct before proceeding.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3 mb-4">
+                                    <div class="esf-card-icon">2</div>
+                                    <div>
+                                        <h4>Verify Identity</h4>
+                                        <p>Complete the required biometric verification to confirm your identity. This ensures that only you can access your examination information.</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-3">
+                                    <div class="esf-card-icon">3</div>
+                                    <div>
+                                        <h4>Find Your Seat</h4>
+                                        <p>View your assigned examination seat number, course details, date, time, and venue all in one place. You can also download your examination docket.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="esf-card">
+                            <h3>Important Notice</h3>
+                            <p>Make sure your examination requirements have been completed before checking your seat. This includes tuition payment, course registration, and biometric verification.</p>
+                            <a href="instructions.html" class="btn esf-btn-danger">Read Full Instructions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="esf-footer">
+        <div class="container-fluid">
+            <a href="index.html" class="footer-logo">
+                <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <span>EXAM <strong>SEAT</strong> FINDER</span>
+            </a>
+            <p class="footer-tagline">Secure. Simple. Accessible.</p>
+            <div class="footer-icons">
+                <a href="about-aau.html" class="footer-icon"><i class="bi bi-building"></i></a>
+                <a href="contact.html" class="footer-icon"><i class="bi bi-envelope"></i></a>
+                <a href="instructions.html" class="footer-icon"><i class="bi bi-question-circle"></i></a>
+                <a href="online-exam-process.html" class="footer-icon"><i class="bi bi-laptop"></i></a>
+                <a href="mission-vision.html" class="footer-icon"><i class="bi bi-eye"></i></a>
+            </div>
+            <hr>
+            <p class="footer-copyright">&copy; 2026 Exam Seat Finder. All rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== BOOTSTRAP JS ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- ==================== SIDEBAR JS ==================== -->
+
+    <!-- <script src="/my project/HTML/js/sidebar.js"></script> -->
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISSION & VISION | EXAM SEAT FINDER</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d6efd'/%3E%3Ccircle cx='32' cy='28' r='8' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M32 8 L45 16 L45 28 C45 40 39 48 32 53 C25 48 19 40 19 28 L19 16 Z' fill='%23ffffff'/%3E%3Ccircle cx='32' cy='28' r='6' fill='%23dc3545'/%3E%3Ccircle cx='32' cy='28' r='3' fill='%23ffffff'/%3E%3Cpath d='M29 20 L35 20 L35 26 L29 26 Z' fill='%23ffffff' opacity='0.3'/%3E%3C/svg%3E">
+
+    <!-- MAIN CSS -->
+     
+    <link rel="stylesheet" href="/css/project.css">
+
+</head>
+
+<body>
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+<nav class="navbar navbar-expand-lg main-navbar fixed-top">
+    <div class="container-fluid px-3 px-lg-4">
+
+        <!-- Menu Toggle - Opens Sidebar -->
+        <button class="menu-toggle me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+            <span class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+
+        <a href="index.html" class="navbar-brand">
+            <span class="esf-brand-logo">
+                <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <span class="brand-text">EXAM <strong>SEAT</strong> FINDER</span>
+            </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="topNavigation">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about-aau.html" class="dropdown-item"><i class="bi bi-building"></i> About AAU</a></li>
+                        <li><a href="instructions.html" class="dropdown-item"><i class="bi bi-question-circle"></i> How It Works</a></li>
+                        <li><a href="online-exam-process.html" class="dropdown-item"><i class="bi bi-laptop"></i> Online Exam Process</a></li>
+                        <li><a href="mission-vision.html" class="dropdown-item"><i class="bi bi-eye"></i> Mission &amp; Vision</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Student
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="find-seat.html" class="dropdown-item"><i class="bi bi-search"></i> Find My Seat</a></li>
+                        <li><a href="timetable.html" class="dropdown-item"><i class="bi bi-calendar"></i> Timetable</a></li>
+                        <li><a href="venues.html" class="dropdown-item"><i class="bi bi-geo-alt"></i> Examination Venues</a></li>
+                        <li><a href="announcement.html" class="dropdown-item"><i class="bi bi-megaphone"></i> Announcements</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="profile.html" class="dropdown-item"><i class="bi bi-person"></i> My Profile</a></li>
+                        <li><a href="settings.html" class="dropdown-item"><i class="bi bi-gear"></i> Settings</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="staff-login.html" class="nav-link">Staff Portal</a></li>
+                <li class="nav-item ms-lg-2">
+                    <a href="profile.html" class="user-profile-btn">
+                        <span class="avatar"><i class="bi bi-person-fill"></i></span>
+                        <span class="profile-text">Osamudiamen E.</span>
+                        <span class="dropdown-arrow"><i class="bi bi-chevron-down"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ==================== SIDEBAR (Bootstrap Offcanvas) ==================== -->
+<div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+    <div class="sidebar-header">
+        <a href="index.html" class="esf-brand-logo">
+            <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+            <span class="brand-text">EXAM <strong>SEAT</strong> FINDER</span>
+        </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <ul class="nav flex-column gap-1">
+        <li><a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a></li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-journal-bookmark-fill"></i> Examination
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="find-seat.html" class="dropdown-item">Find My Seat</a></li>
+                <li><a href="timetable.html" class="dropdown-item">Examination Timetable</a></li>
+                <li><a href="venues.html" class="dropdown-item">Examination Venues</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-info-circle-fill"></i> Information
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="announcement.html" class="dropdown-item">Announcements</a></li>
+                <li><a href="instructions.html" class="dropdown-item">Examination Instructions</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-check-fill"></i> My Account
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="profile.html" class="dropdown-item">Profile</a></li>
+                <li><a href="settings.html" class="dropdown-item">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a href="login.html" class="dropdown-item text-danger"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+    <!-- MAIN CONTENT -->
+    <main class="esf-main">
+        <section class="esf-page-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1>Mission &amp; Vision</h1>
+                        <p>Our guiding principles and aspirations for excellence.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="180" height="100">
+                            <circle cx="100" cy="60" r="45" fill="rgba(255,255,255,0.05)"/>
+                            <circle cx="100" cy="60" r="30" fill="rgba(255,255,255,0.04)"/>
+                            <circle cx="100" cy="60" r="15" fill="rgba(255,255,255,0.08)"/>
+                            <circle cx="100" cy="60" r="6" fill="rgba(255,255,255,0.15)"/>
+                            <line x1="100" y1="20" x2="100" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                            <line x1="60" y1="60" x2="140" y2="60" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                            <text x="100" y="115" font-family="'Inter',sans-serif" font-size="8" fill="rgba(255,255,255,0.2)" text-anchor="middle">★</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <!-- Mission Section -->
+                    <div class="esf-card mb-4">
+                        <div class="esf-card-body">
+                            <h2 class="fw-bold text-primary"><i class="bi bi-flag-fill me-2"></i>Our Mission</h2>
+                            <p class="mt-3">At Ambrose Alli University (AAU), Ekpoma, our mission is to provide a conducive learning environment that fosters academic excellence, research, and innovation. We are committed to producing graduates who are not only academically sound but also morally upright, socially responsible, and equipped with the skills and knowledge needed to contribute meaningfully to the development of society.</p>
+
+                            <p>We strive to achieve this mission through the following core principles:</p>
+                            <ul>
+                                <li><strong>Academic Excellence:</strong> We are dedicated to maintaining the highest standards of teaching and learning across all disciplines. Our faculty members are highly qualified and committed to delivering quality education that prepares students for successful careers and lifelong learning.</li>
+                                <li><strong>Research and Innovation:</strong> We encourage and support research that addresses societal challenges and contributes to the advancement of knowledge. Our research centers and laboratories are equipped with modern facilities to enable cutting-edge research across various fields.</li>
+                                <li><strong>Community Engagement:</strong> We believe in the importance of giving back to the community and fostering partnerships that benefit society. Our students and staff engage in various community service initiatives that promote social development and cultural enrichment.</li>
+                                <li><strong>Student Development:</strong> We are committed to the holistic development of our students. Beyond academic instruction, we provide opportunities for students to develop leadership skills, participate in extracurricular activities, and cultivate values that will serve them well in their personal and professional lives.</li>
+                            </ul>
+
+                            <p>Our mission is also reflected in our commitment to providing accessible and affordable education to all qualified students, regardless of their background or circumstances. We offer various scholarships and financial aid programs to support students in need.</p>
+
+                            <p>As we continue to evolve and adapt to the changing needs of society, our mission remains steadfast: to be a center of excellence in higher education that transforms lives and contributes to the advancement of knowledge and human development.</p>
+                        </div>
+
+
+                        <!-- Vision Section -->
+                        <div class="esf-card-body">
+                            <h2 class="fw-bold text-danger"><i class="bi bi-eye-fill me-2"></i>Our Vision</h2>
+                            <p class="mt-3">The vision of Ambrose Alli University is to be a world-class institution of higher learning that is recognized globally for its excellence in teaching, research, and community service. We aspire to be a leading university that produces graduates who are equipped to compete effectively in the global marketplace and contribute to the advancement of knowledge and human development.</p>
+
+                            <p>Our vision is guided by the following principles:</p>
+                            <ul>
+                                <li><strong>Global Recognition:</strong> We aim to be recognized as one of the leading universities in Africa and the world. We are committed to achieving international standards of excellence in all aspects of our operations, including teaching, research, and community engagement.</li>
+                                <li><strong>Innovation and Creativity:</strong> We strive to foster a culture of innovation and creativity among our students and staff. We encourage the development of new ideas and approaches that can address societal challenges and contribute to economic development.</li>
+                                <li><strong>Technology Integration:</strong> We are committed to integrating technology into all aspects of our operations, including teaching, learning, research, and administration. We believe that technology is a key driver of progress and that we must leverage it to enhance the quality of education and services we provide.</li>
+                                <li><strong>Sustainability:</strong> We are committed to operating in a sustainable manner that protects the environment and ensures the long-term viability of our institution. We incorporate sustainability principles into our academic programs, research activities, and campus operations.</li>
+                            </ul>
+
+                            <p>Our vision is also reflected in our commitment to fostering a diverse and inclusive community where all individuals are valued and respected. We believe that diversity enriches the learning experience and prepares students to thrive in a multicultural world.</p>
+
+                            <p>As we work towards realizing our vision, we are guided by the core values of integrity, excellence, transparency, and accountability. These values underpin all aspects of our operations and shape the culture of our institution.</p>
+
+                            <div class="alert alert-primary mt-4">
+                                <i class="bi bi-star-fill text-warning me-2"></i>
+                                <strong>Our Commitment:</strong> Ambrose Alli University is committed to providing quality education that empowers students to become leaders, innovators, and change-makers in their communities and beyond. We believe that education is the key to unlocking human potential and building a better future for all.
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="esf-card">
+                        <div class="esf-card-header">Core Values</div>
+                        <div class="esf-card-body">
+                            <div class="d-flex gap-3 align-items-start mb-3">
+                                <span class="badge bg-primary rounded-circle p-2"><i class="bi bi-check"></i></span>
+                                <div>
+                                    <strong>Integrity</strong>
+                                    <p class="text-secondary small mb-0">Upholding honesty and ethical standards</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 align-items-start mb-3">
+                                <span class="badge bg-danger rounded-circle p-2"><i class="bi bi-check"></i></span>
+                                <div>
+                                    <strong>Excellence</strong>
+                                    <p class="text-secondary small mb-0">Striving for the highest quality</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 align-items-start mb-3">
+                                <span class="badge bg-primary rounded-circle p-2"><i class="bi bi-check"></i></span>
+                                <div>
+                                    <strong>Transparency</strong>
+                                    <p class="text-secondary small mb-0">Openness in all operations</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 align-items-start">
+                                <span class="badge bg-success rounded-circle p-2"><i class="bi bi-check"></i></span>
+                                <div>
+                                    <strong>Accountability</strong>
+                                    <p class="text-secondary small mb-0">Responsibility for actions and outcomes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="esf-footer">
+        <div class="container-fluid">
+            <a href="index.html" class="footer-logo">
+                <span class="brand-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <span>EXAM <strong>SEAT</strong> FINDER</span>
+            </a>
+            <p class="footer-tagline">Secure. Simple. Accessible.</p>
+            <div class="footer-icons">
+                <a href="about-aau.html" class="footer-icon"><i class="bi bi-building"></i></a>
+                <a href="contact.html" class="footer-icon"><i class="bi bi-envelope"></i></a>
+                <a href="instructions.html" class="footer-icon"><i class="bi bi-question-circle"></i></a>
+                <a href="online-exam-process.html" class="footer-icon"><i class="bi bi-laptop"></i></a>
+                <a href="mission-vision.html" class="footer-icon"><i class="bi bi-eye"></i></a>
+            </div>
+            <hr>
+            <p class="footer-copyright">&copy; 2026 Exam Seat Finder. All rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
